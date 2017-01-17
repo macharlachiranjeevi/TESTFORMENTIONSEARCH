@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vzi-CY-Mdh">
-                                <rect key="frame" x="0.0" y="135" width="375" height="512"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactsTVC" id="2Bm-o2-Sgm" customClass="ContactsTVC">
@@ -86,12 +86,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="3EA-TX-SEG" secondAttribute="trailing" id="31z-Ww-2zY"/>
-                            <constraint firstItem="Vzi-CY-Mdh" firstAttribute="top" secondItem="3EA-TX-SEG" secondAttribute="bottom" constant="8" id="63G-66-VLk"/>
+                            <constraint firstItem="Vzi-CY-Mdh" firstAttribute="top" secondItem="3EA-TX-SEG" secondAttribute="bottom" constant="-37" id="63G-66-VLk"/>
                             <constraint firstItem="3EA-TX-SEG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JTQ-SB-7pj"/>
                             <constraint firstItem="Vzi-CY-Mdh" firstAttribute="leading" secondItem="3EA-TX-SEG" secondAttribute="leading" id="VEZ-Dx-z37"/>
                             <constraint firstItem="3EA-TX-SEG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cXN-o4-vHb"/>
                             <constraint firstItem="Vzi-CY-Mdh" firstAttribute="trailing" secondItem="3EA-TX-SEG" secondAttribute="trailing" id="s3v-OZ-9rg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vzi-CY-Mdh" secondAttribute="bottom" constant="20" id="wCH-tF-3VW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vzi-CY-Mdh" secondAttribute="bottom" constant="65" id="wCH-tF-3VW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="@ Mention search" id="w9E-Ca-N7c"/>

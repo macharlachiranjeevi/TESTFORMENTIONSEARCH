@@ -195,23 +195,12 @@ NSArray *arr = [_CommentsTv.text componentsSeparatedByString:@"@"];
     NSString *ContSt = [arr lastObject];
   NSString * contactStr =  [ContSt stringByReplacingOccurrencesOfString:ContSt withString:currentUserName];
     NSLog(@"ContaCT NAME = %@" , contactStr);
-    _CommentsTv.text = [_CommentsTv.text stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"@%@",ContSt] withString:currentUserName];
+
+    if (![_CommentsTv.text containsString:contactStr]) {
+_CommentsTv.text = [_CommentsTv.text stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"@%@",ContSt] withString:currentUserName];
+    }
+
      NSLog(@"ContaCT NAME FINAL = %@" , _CommentsTv.text);
-
-    NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:self.CommentsTv.text];
-
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@"(%@)", currentUserName] options:kNilOptions error:nil];
-
-    NSRange range = NSMakeRange(0 ,_CommentsTv.text.length);
-
-
-    [regex enumerateMatchesInString:_CommentsTv.text options:kNilOptions range:range usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-
-        NSRange subStringRange = [result rangeAtIndex:0];
-        [mutableAttributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:subStringRange];
-    }];
-
-    self.CommentsTv.attributedText = mutableAttributedString;
     [self.filteredArray removeAllObjects];;
     [self.namesTbv setHidden:YES];
 }
